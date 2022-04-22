@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int N,r,large=0;
-    scanf("%d",&N);
-    while(N>0)
+    int n,m,mst=0;
+    scanf("%d",&n);
+    while(n>0)
     {
-        r=N%10;
-        if(large<r)
+        m=n%10;
+        if(m>mst)
         {
-            large=r;
+            mst=m;
         }
-        N/=10;
+        n/=10;
     }
-    printf("%d",large);
+    printf("%d",mst);
 }
