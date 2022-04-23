@@ -5,7 +5,7 @@ int main()
     scanf("%d%d",&m,&n);
     max=m>n?m:n;
     lcm=max;
-    for(i=max;;i=i+max)
+    for(i=max;;i+=max)
     {
         if(i%m==0&&i%n==0)
         {
