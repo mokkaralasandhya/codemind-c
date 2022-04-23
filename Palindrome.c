@@ -11,7 +11,11 @@ int main()
         N/=10;
     }
     if(sum==l)
-    printf("True");
+    {
+        printf("True");
+    }
     else
-    printf("False");
+    {
+        printf("False");
+    }
 }
