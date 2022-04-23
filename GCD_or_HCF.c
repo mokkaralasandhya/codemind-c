@@ -6,7 +6,7 @@ int main()
     for(t=2;t<=a&&t<=b;t++)
     {
         if(a%t==0&&b%t==0)
-        (i=t);
+        {i=t;}
     }
     if(i!=0)
     printf("%d",i);
