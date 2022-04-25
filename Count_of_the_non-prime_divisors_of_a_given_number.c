@@ -1,21 +1,26 @@
 #include<stdio.h>
 int main()
 {
-    int N,i,j,c1=0,c2=0;
-    scanf("%d",&N);
-    for(i=1;i<=N;i++)
+    int n,i,fact=0,j,count=0;
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
     {
-        if(N%i==0)
+        if(n%i==0)
         {
-            c2=0;
+            fact=0;
             for(j=1;j<=i;j++)
             {
                 if(i%j==0)
-                c2++;
+                {
+                    fact+=1;
+                }
             }
-            if(c2!=2)
-            c1++;
+            if(fact!=2)
+            {
+                count+=1;
+            }
         }
     }
-    printf("%d",c1);
+    printf("%d",count);
+    return 0;
 }
