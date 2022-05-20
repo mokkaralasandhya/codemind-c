@@ -28,15 +28,19 @@ int main()
                 pr++;
             }
             dig++;
-            n/=10;
+            n=n/10;
         }
         if(dig==pr)
         {
             printf("Mega Prime");
-        }else{
+        }
+        else
+        {
             printf("Not Mega Prime");
         }
-    }else{
+    }
+    else
+    {
         printf("Not Mega Prime");
     }
     return 0;
