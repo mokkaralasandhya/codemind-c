@@ -41,15 +41,11 @@ int main()
     if(fwd==0 && bwd==0)
     {
         printf("%d",fwd);
-    }
-    else if(fwd<bwd)
+    }else if(fwd<bwd)
     {
         printf("%d",fwd);
-    }
-    else
-    {
+    }else{
         printf("%d",bwd);
     }
     return 0;
-    
 }
