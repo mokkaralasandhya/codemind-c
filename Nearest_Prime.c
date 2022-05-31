@@ -11,43 +11,43 @@ int main()
             c=0;
             for(k=1;k<=j;k++)
             {
-              if(j%k==0)
-              {
-                c++;
-              }
+                if(j%k==0)
+                {
+                    c++;
+                }
             }
-         if(c==2)
-          {
-             min=j;
-             break;
-          }
-        }
-     for(j=a;;j++)
-     {
-        c1=0;
-        for(k=1;k<=j;k++)
-        {
-            if(j%k==0)
+            if(c==2)
             {
-                c1++;
+                min=j;
+                break;
             }
         }
-        if(c1==2)
+        for(j=a;;j++)
         {
-            max=j;
-            break;
+            c1=0;
+            for(k=1;k<=j;k++)
+            {
+                if(j%k==0)
+                {
+                    c1++;
+                }
+            }
+            if(c1==2)
+            {
+                max=j;
+                break;
+            }
         }
-     }
-    r1=a-min;
-    r2=max-a;
-    if(r1<r2)
-    printf("%d
+        r1=a-min;
+        r2=max-a;
+        if(r1<r2)
+        printf("%d
 ",min);
-    else if(r1==r2)
-    printf("%d
+        else if(r1==r2)
+        printf("%d
 ",min);
-    else
-    printf("%d
+        else
+        printf("%d
 ",max);
     }
 }
