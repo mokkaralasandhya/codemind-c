@@ -34,3 +34,4 @@ int main()
     printf("%.2f",avg);
     }
 }
+
