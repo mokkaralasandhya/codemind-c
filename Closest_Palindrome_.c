@@ -1,46 +1,52 @@
 #include<stdio.h>
 int main()
 {
-    int n,l,m,min,max,r;
+    int n,i,j,rev=0,r,temp,next,prev,diff;
     scanf("%d",&n);
-    for(int i=n-1;i>=0;i--)
+    i=n+1;
+    j=n-1;
+    while(i>0)
     {
-        l=i;
-        int sum=0;
-        while(l!=0)
+        rev=0;
+        temp=i;
+        while(temp>0)
         {
-            r=l%10;
-            sum=sum*10+r;
-            l/=10;
+            r=temp%10;
+            rev=(rev*10)+r;
+            temp/=10;
         }
-        if(sum==i)
+        if(i==rev)
         {
-            min=i;
-            break;
+         next=i;
+         break;
         }
+        i++;
     }
-    for(int i=n+1;;i++)
+    while(j>0)
     {
-        l=i;
-        int sum=0;
-        while(l!=0)
+        rev=0;
+        temp=j;
+        while(temp>0)
         {
-            r=l%10;
-            sum=sum*10+r;
-            l/=10;
+            r=temp%10;
+            rev=(rev*10)+r;
+            temp/=10;
         }
-        if(sum==i)
+        if(j==rev)
         {
-            max=i;
-            break;
+         prev=j;
+         break;
         }
+        j--;
     }
-    int r1=n-min;
-    int r2=max-n;
-    if(r1==r2)
-    printf("%d %d",min,max);
-    else if(r1>r2)
-    printf("%d",max);
-    else
-    printf("%d",min);
+    if(next-n==n-prev)
+    {
+        printf("%d %d",prev,next);
+    }else if(next-n>n-prev)
+    {
+        printf("%d",prev);
+    }else{
+        printf("%d",next);
+    }
+    return 0;
 }
