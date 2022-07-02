@@ -1,12 +1,13 @@
 #include<stdio.h>
 int main()
 {
-    int n,a,b;
-    scanf("%d",&n);
-    for(int i=0;i<n;i++)
+    int t,i;
+    scanf("%lld",&t);
+    for(i=0;i<t;i++)
     {
-        scanf("%d%d",&a,&b);
-        printf("%d
+        long long int a,b;
+        scanf("%lld%lld",&a,&b);
+        printf("%lld
 ",a+b);
     }
 }
