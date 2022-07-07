@@ -1,23 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int ar[100],n,a,b,c=0;
+    int i,n,arr[100];
     scanf("%d",&n);
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-        scanf("%d",&ar[i]);
+        scanf("%d",&arr[i]);
     }
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-       if(ar[i]%2==0)
-       printf("%d ",ar[i]);
+        if(arr[i]%2==0)
+        printf("%d ",arr[i]);
     }
-    for(int i=0;i<n;i++)
+    for(i=0;i<n;i++)
     {
-       if(ar[i]%2!=0)
-       printf("%d ",ar[i]);
+        if(arr[i]%2!=0)
+        printf("%d ", arr[i]);
     }
-    
-    
-    
 }
