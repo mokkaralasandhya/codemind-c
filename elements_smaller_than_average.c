@@ -1,57 +1,20 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #include<stdio.h>
 int main()
 {
-    int ar[100],n,sum=0,c=0;
-    int a;
+    int c=0,avg,arr[100],sum=0,n;
     scanf("%d",&n);
     for(int i=0;i<n;i++)
     {
-        scanf("%d",&ar[i]);
-        sum=sum+ar[i];
+        scanf("%d",&arr[i]);
+        sum+=arr[i];
     }
-    a=(sum/n)+1;
+    avg=sum/n+1;
     for(int i=0;i<n;i++)
     {
-        if(ar[i]<a)
-        c++;
+        if(arr[i]<avg)
+        {
+            c++;
+        }
     }
     printf("%d",c);
 }
-
-
