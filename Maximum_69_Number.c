@@ -1,19 +1,17 @@
 #include<stdio.h>
-#include<string.h>
 int main()
 {
-    char s[100];
-    int i,n;
-    scanf("%s",&s);
-    n=strlen(s);
-    for(i=0;i<n;i++)
+    char str[1000];
+    scanf("%[^
+]s",str);
+    int i;
+    for(i=0;str[i]!=NULL;i++)
     {
-        if(s[i]=='6')
+        if(str[i]=='6')
         {
-            s[i]='9';
+            str[i]='9';
             break;
         }
     }
-    printf("%s",s);
-    return 0;
+    printf("%s",str);
 }
