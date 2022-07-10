@@ -1,25 +1,35 @@
 #include<stdio.h>
+#include<math.h>
 int main()
 {
-    int n,m,d,f=0,c;
-    scanf("%d%d",&n,&m);
-    c=m+n;
-    d=c+1;
-    while(1)
+    int m=0,i,d,n,n1,n2,t,c=2,j,a[1000],b[1000],p,k=0;
+    scanf("%d",&n1);
+    scanf("%d",&n2);
+    n=n1+n2;
+for(i=n+1;i<=n+1000;i++)
+{
+    c=2;
+    for(j=2;j<i;j++)
     {
-        f=0;
-        for(int i=1;i<=d;i++)
+        if(i%j==0)
         {
-            if(d%i==0)
-            {
-                f++;
-            }
+            c++;
         }
-        if(f==2)
-        {
-            printf("%d",d-c);
-            break;
-        }
-        d++;
     }
+    if(c==2)
+    {
+        a[k]=abs(n-i);
+        m++;
+        k++;
+    }
+}
+d=a[0];
+for(i=0;i<m;i++)
+{
+    if(d>a[i])
+    {
+        d=a[i];
+    }
+}
+printf("%d",d);
 }
