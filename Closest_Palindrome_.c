@@ -1,52 +1,40 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,j,rev=0,r,temp,next,prev,diff;
+    int n,i,r,sum,p,a,b;
     scanf("%d",&n);
-    i=n+1;
-    j=n-1;
-    while(i>0)
+    for(i=n-1;i>0;i--)
     {
-        rev=0;
-        temp=i;
-        while(temp>0)
+        p=i,sum=0;
+        while(p)
         {
-            r=temp%10;
-            rev=(rev*10)+r;
-            temp/=10;
+            r=p%10;
+            sum=(sum*10)+r;
+            p/=10;
         }
-        if(i==rev)
+        if(sum==i)
         {
-         next=i;
-         break;
+            a=i;
+            break;
         }
-        i++;
     }
-    while(j>0)
+    for(i=n+1;;i++)
     {
-        rev=0;
-        temp=j;
-        while(temp>0)
+        p=i,sum=0;
+        while(p)
         {
-            r=temp%10;
-            rev=(rev*10)+r;
-            temp/=10;
+            r=p%10;
+            sum=(sum*10)+r;
+            p/=10;
         }
-        if(j==rev)
+        if(sum==i)
         {
-         prev=j;
-         break;
+            b=i;
+            break;
         }
-        j--;
     }
-    if(next-n==n-prev)
-    {
-        printf("%d %d",prev,next);
-    }else if(next-n>n-prev)
-    {
-        printf("%d",prev);
-    }else{
-        printf("%d",next);
-    }
-    return 0;
+    if(n-a==b-n)
+    printf("%d %d",a,b);
+    else
+    printf("%d",a);
 }
