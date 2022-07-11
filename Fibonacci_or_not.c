@@ -1,23 +1,28 @@
 #include<stdio.h>
 int main()
 {
-    int n1=0,n2=1,n3,i,N;
-    scanf("%d",&N);
-    for(i=2;i<N;++i)
+    int n,j=0,i,a=0,b=1,c;
+    scanf("%d",&n);
+    if((n==0)||(n==1))
     {
-        n3=n1+n2;
-        if(n3==N)
+        printf("True");
+    }
+    else
+    {
+        c=a+b;
+        while(c<n)
+        {
+            a=b;
+            b=c;
+            c=a+b;
+        }
+        if(n==c)
         {
             printf("True");
-            break;
         }
-        else if(n3>N)
+        else
         {
             printf("False");
-            break;
         }
-        n1=n2;
-        n2=n3;
     }
-    return 0;
 }
