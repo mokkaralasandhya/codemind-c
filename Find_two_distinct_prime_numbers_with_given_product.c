@@ -27,8 +27,6 @@ int main()
             }
         }
     }
-    if(sum==0)
-    {
-        printf("-1");
-    }
+    if(sum!=1)
+    printf("-1");
 }
