@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 int main()
 {
@@ -13,11 +12,11 @@ int main()
     {
         if(ar[i]>=a&&ar[i]<=b)
         {
-          if(ar[i]<min)
-          {
-          min=ar[i];
-          c++;
-          }
+            if(ar[i]<min)
+            {
+                min=ar[i];
+                c++;
+            }
         }
     }
     if(c==0)
@@ -25,4 +24,3 @@ int main()
     else
     printf("%d",min);
 }
-
