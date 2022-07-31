@@ -12,12 +12,8 @@ int main()
     {
         if(ar[i]<=k)
         {
-            sum=sum+ar[i];
+            sum+=ar[i];
         }
     }
     printf("%d",sum);
 }
-
-
-
-
