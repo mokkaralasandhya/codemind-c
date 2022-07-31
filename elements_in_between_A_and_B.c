@@ -12,14 +12,10 @@ int main()
     {
         if(ar[i]>=a&&ar[i]<=b)
         {
-          printf("%d ",ar[i]);
-          sum++;
+            printf("%d ",ar[i]);
+            sum++;
         }
     }
     if(sum==0)
     printf("-1");
 }
-
-
-
-
