@@ -12,7 +12,7 @@ int main()
     {
         if(ar[i]>=a&&ar[i]<=b)
         {
-            sum=sum+ar[i];
+            sum+=ar[i];
         }
     }
     printf("%d",sum);
