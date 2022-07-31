@@ -1,14 +1,15 @@
 #include<stdio.h>
 int main()
 {
-    int n,a[100],f=0,sum=0;
+    int n,a[100],sum=0,f=0;
     scanf("%d",&n);
     for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
     for(int i=0;i<n;i++)
-    { int c=0;
+    {
+        int c=0;
         for(int j=i+1;j<n;j++)
         {
             if(a[i]==a[j])
@@ -19,9 +20,8 @@ int main()
         if(c==0)
         {
             if(a[i]%2==1)
-             sum++;
+            sum++;
         }
     }
     printf("%d",sum);
 }
-
