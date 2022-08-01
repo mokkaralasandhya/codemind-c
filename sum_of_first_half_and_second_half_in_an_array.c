@@ -1,20 +1,20 @@
 #include<stdio.h>
 int main()
 {
-    int ar[100],n,k,sum=0,s=0;
+    int a[100],n,k,sum=0,s=0;
     scanf("%d",&n);
     for(int i=0;i<n;i++)
     {
-        scanf("%d",&ar[i]);
+        scanf("%d",&a[i]);
     }
     scanf("%d",&k);
     for(int i=0;i<n/2;i++)
     {
-        sum=sum+ar[i];
+        sum+=a[i];
     }
     for(int i=n/2;i<n;i++)
     {
-        s=s+ar[i];
+        s+=a[i];
     }
     printf("%d
 ",sum);
