@@ -9,7 +9,8 @@ int main()
         scanf("%d",&a[i]);
     }
     for(int i=0;i<n;i++)
-    { c=0;
+    {
+        c=0;
         for(int j=0;j<n;j++)
         {
             if(a[i]==a[j])
@@ -19,7 +20,7 @@ int main()
         }
         if(c==a[i])
         {
-            sum=sum+a[i];
+            sum+=a[i];
             f++;
             a[i]=0;
         }
@@ -30,8 +31,7 @@ int main()
     }
     else
     {
-    avg=float(sum)/f;
-    printf("%.2f",avg);
+        avg=float(sum)/f;
+        printf("%.2f",avg);
     }
 }
-
