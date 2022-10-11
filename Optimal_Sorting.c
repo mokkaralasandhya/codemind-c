@@ -1,0 +1,78 @@
+#include<stdio.h>
+int main()
+{
+    int n,c=0,x,y,m,arr[100],arr1[100],k,j,l,i,max=-9999,min=9999;
+    scanf("%d",&n);
+    while(n)
+    {
+        scanf("%d",&m);
+        for(i=0;i<m;i++)
+        {
+            scanf("%d",&arr[i]);
+        }
+        for(i=0;i<m;i++)
+        {
+            arr1[i]=arr[i];
+        }
+        for(i=0;i<m;i++)
+        {min=9999;
+        l=arr[i];
+            for(j=i;j<m;j++)
+            {
+                if(arr[j]<min)
+                {
+                    min=arr[j];
+                    k=j;
+                }
+            }
+            if(i==m-1)
+            arr[i]=min;
+            else
+            {
+            arr[k]=l;
+            arr[i]=min;
+            }
+        }
+        max=-999;
+        for(i=0;i<m;i++)
+        {
+            if(arr1[i]>max)
+            {
+                max=arr1[i];
+            }
+        }
+        x=max;
+        for(i=0;i<m;i++)
+        {
+            if(arr1[i]<min)
+            {
+                min=arr1[i];
+            }
+        }
+        y=min;
+        /*for(i=0;i<m;i++)
+        {
+            printf("%d",arr[i]);
+            
+        }
+        printf("
+");
+        for(i=0;i<m;i++)
+        {
+            printf("%d",arr1[i]);
+            
+        }*/
+        for(i=0;i<m;i++)
+        {
+            if(arr[i]==arr1[i])
+            c+=1;
+        }
+        
+        if(c==m)
+        printf("%d",0);
+        else
+        printf("%d
+",x-y);
+        n-=1;
+    }
+}
